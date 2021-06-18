@@ -40,9 +40,9 @@ jobs:
   with:
     # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
     creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
-    - name: ACR login
-      run: az acr login -n $ACRNAME
+      
+      - name: ACR login
+        run: az acr login -n $ACRNAME
       
     - name: Build and push image
       uses: docker/build-push-action@v2
