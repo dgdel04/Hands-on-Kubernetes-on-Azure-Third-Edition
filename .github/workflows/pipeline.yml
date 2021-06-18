@@ -46,8 +46,7 @@ jobs:
           
       - name: ACR login
         run: az acr login -n $ACRNAME
-      
-    - name: Build and push image
+          - name: Build and push image
       uses: docker/build-push-action@v2
       with:
         context: ./Chatper15
